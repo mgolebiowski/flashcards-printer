@@ -33,7 +33,7 @@ const Home: NextPage = () => {
         <Flashcard flashcardsList={flashcards} />
       </main>
 
-      <footer className={styles.footer}>With love from&nbsp;<a href="https://mgolebiowski.me">Misiu</a></footer>
+      <footer className={styles.footer}>Coded with ❤️ by&nbsp;<a href="https://golebiowski.me">Misiu</a></footer>
     </>
   );
 };
