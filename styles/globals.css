@@ -14,3 +14,41 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.tables-to-print {
+  display: none;
+}
+
+@media print {
+  footer, h1, input, .browser-input, p {
+    display: none !important;
+  }
+
+  .tables-to-print {
+    display: block;
+  }
+
+  table {
+    font-size: 14px;
+    width: 100%;
+    page-break-before: always;
+    break-before: page;
+    border: 1px black solid;
+  }
+
+  .page-table-back {
+    direction: rtl;
+  }
+
+  td {
+    width: 20%;
+    text-align: center;
+    border: 1px black solid;
+    word-break: keep-all;
+    white-space: nowrap;
+  }
+
+  tr {
+    height: 150px;
+  }
+}
