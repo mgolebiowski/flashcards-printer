@@ -11,7 +11,6 @@ import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   const [flashcards, setFlashcards] = useState<FlashCard[]>([]);
-  console.log(flashcards)
 
   return (
     <>
