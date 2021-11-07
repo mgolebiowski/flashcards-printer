@@ -10,4 +10,4 @@ Next.js & Typescript, File API, CSS for `print` media queries.
 
 ## Try it yourself
 
-Available under [http://golebiowski.me/flashcards-printer/](http://golebiowski.me/flashcards-printer/)
+Available under [https://golebiowski.me/flashcards-printer/](https://golebiowski.me/flashcards-printer/)
