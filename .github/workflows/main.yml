@@ -11,12 +11,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Install
+        run: npm ci
+
       - name: Test
         run: npm run test
 
       - name: Build
         run: |
-          npm ci
           NODE_ENV=production npm run build
 
       - name: GH Pages deploy
