@@ -1,12 +1,13 @@
 import { FlashCard } from "./Flashcards";
-import styles from "../styles/InputForm.module.css";
+import styles from "../styles/FileForm.module.css";
 import { ChangeEvent, ChangeEventHandler } from "react";
+import { textParser } from "../utils/textParsing";
 
-interface InputFormProps {
+interface FileFormProps {
   readTextCallback: (flashcards: FlashCard[]) => void;
 }
 
-const InputForm = ({ readTextCallback }: InputFormProps) => {
+const FileForm = ({ readTextCallback }: FileFormProps) => {
   const handleFileInput: ChangeEventHandler<HTMLInputElement> = (
     e: ChangeEvent<HTMLInputElement>
   ) => {
@@ -16,12 +17,7 @@ const InputForm = ({ readTextCallback }: InputFormProps) => {
     reader.onload = function () {
       const textValue = reader.result || "";
       if (typeof textValue === "string") {
-        readTextCallback(
-          textValue.split("\r\n").map((str) => ({
-            front: str.split(";")[0],
-            back: str.split(";")[1],
-          }))
-        );
+        readTextCallback(textParser(textValue));
       }
     };
   };
@@ -37,4 +33,4 @@ const InputForm = ({ readTextCallback }: InputFormProps) => {
   );
 };
 
-export default InputForm;
+export default FileForm;

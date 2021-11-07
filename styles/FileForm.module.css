@@ -3,9 +3,3 @@
   max-width: 500px;
   text-align: center;
 }
-
-@media print {
-  .input {
-    display: none;
-  }
-}

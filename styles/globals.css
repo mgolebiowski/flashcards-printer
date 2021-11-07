@@ -42,10 +42,10 @@ a {
 
   td {
     width: 20%;
+    max-width: 20%;
     text-align: center;
     border: 1px black solid;
-    word-break: keep-all;
-    white-space: nowrap;
+    direction: ltr;
   }
 
   tr {

@@ -22,6 +22,8 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Build
+        env:
+          NODE_ENV: production
         run: |
           npm install
           npm run build

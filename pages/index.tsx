@@ -1,14 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
+
 import Flashcard, { FlashCard } from "../components/Flashcards";
-import InputForm from "../components/InputForm";
+import Inputs from "../components/Inputs";
+
 import styles from "../styles/Home.module.css";
 
 
 
 const Home: NextPage = () => {
   const [flashcards, setFlashcards] = useState<FlashCard[]>([]);
+  console.log(flashcards)
 
   return (
     <>
@@ -21,7 +24,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <h1 className={styles.title}>Flashcards printer</h1>
 
-        <InputForm readTextCallback={setFlashcards} />
+        <Inputs readTextCallback={setFlashcards} />
         <div className={styles.successInfo}>
           {flashcards.length > 0 &&
             <>

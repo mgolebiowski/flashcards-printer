@@ -44,7 +44,7 @@ const Flashcards = ({ flashcardsList }: FlashcardProps) => {
                 <tr key={`page-back-${pageId}-row-${rowId}`}>
                   {row.map((el, elId) => (
                     <td key={`page-back-${pageId}-el-${rowId}-${elId}`}>
-                      {el.back}{" "}
+                      {el.back}
                     </td>
                   ))}
                 </tr>
