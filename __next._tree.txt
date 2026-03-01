@@ -1,0 +1,3 @@
+:HL["/flashcards-printer/_next/static/chunks/5c8f373ef4a942ba.css","style"]
+:HL["/flashcards-printer/_next/static/chunks/88a811c8aad989b8.css","style"]
+0:{"buildId":"BHLQN_NcrKxb4ucZmd8GV","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
