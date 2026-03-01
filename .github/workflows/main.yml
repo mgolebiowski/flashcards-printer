@@ -14,11 +14,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'yarn'
-          corepack: true
 
-      - name: Install
-        run: yarn install
+      - name: Enable corepack and install
+        run: |
+          corepack enable
+          yarn install
 
       - name: Lint
         run: yarn lint
