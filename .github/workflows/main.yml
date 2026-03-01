@@ -33,7 +33,7 @@ jobs:
           NODE_ENV=production yarn build
 
       - name: GH Pages deploy
-        uses: Cecilapp/GitHub-Pages-deploy@4.1.1
+        uses: Cecilapp/GitHub-Pages-deploy@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
