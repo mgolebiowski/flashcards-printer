@@ -1,3 +1,5 @@
+'use client';
+
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 import { FlashCard } from './Flashcards';

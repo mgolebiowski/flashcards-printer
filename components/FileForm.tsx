@@ -1,3 +1,5 @@
+'use client';
+
 import { FlashCard } from "./Flashcards";
 import styles from "../styles/FileForm.module.css";
 import { ChangeEvent, ChangeEventHandler } from "react";
