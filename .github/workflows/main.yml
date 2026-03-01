@@ -9,20 +9,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+
+      - name: Enable corepack
+        run: corepack enable
 
       - name: Install
-        run: npm ci
+        run: yarn install
+
+      - name: Lint
+        run: yarn lint
 
       - name: Test
-        run: npm run test
+        run: yarn test:run
 
       - name: Build
         run: |
-          NODE_ENV=production npm run build
+          NODE_ENV=production yarn build
 
       - name: GH Pages deploy
-        uses: Cecilapp/GitHub-Pages-deploy@3.2.0
+        uses: Cecilapp/GitHub-Pages-deploy@4.1.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
