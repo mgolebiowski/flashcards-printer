@@ -13,7 +13,7 @@ const FileForm = ({ readTextCallback }: FileFormProps) => {
   const handleFileInput: ChangeEventHandler<HTMLInputElement> = (
     e: ChangeEvent<HTMLInputElement>
   ) => {
-    let reader = new FileReader();
+    const reader = new FileReader();
     const target = e.target as EventTarget & { files: FileList };
     reader.readAsText(target.files[0]);
     reader.onload = function () {

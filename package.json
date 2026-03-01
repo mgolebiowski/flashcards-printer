@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint .",
+    "test": "vitest",
+    "test:run": "vitest run"
   },
   "dependencies": {
     "next": "^16.1.6",
@@ -14,10 +17,17 @@
     "react-tabs": "^6.0.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.18.0",
     "@types/node": "25.3.3",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@types/react-tabs": "^2.3.4",
-    "typescript": "^5.7.0"
+    "eslint": "^9.18.0",
+    "eslint-config-next": "^16.1.6",
+    "globals": "^15.14.0",
+    "jsdom": "^26.0.0",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.21.0",
+    "vitest": "^3.0.0"
   }
 }
